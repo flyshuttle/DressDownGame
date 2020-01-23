@@ -22,8 +22,6 @@ body {
 }
 
 .draggable img{
-    width: 40%;
-    height: auto;
     position: relative;
 }
 
