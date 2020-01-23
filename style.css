@@ -10,8 +10,8 @@
 .draggable{
     touch-action: none;
     user-select: none;
-    -webkit-transform: translate(0px, 0px);
-    transform: translate(0px, 0px);
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
     position: absolute;
 }
 
