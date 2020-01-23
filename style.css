@@ -8,6 +8,9 @@ body {
 }
 
 #container {
+    width: 800px;
+    height: 600px;
+    position: relative;
 }
 
 .draggable{
@@ -19,8 +22,8 @@ body {
 }
 
 .draggable img{
-    max-width: 40%;
-    max-height: 40%;
+    width: 40%;
+    height: auto;
     position: relative;
 }
 
