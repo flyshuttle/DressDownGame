@@ -18,7 +18,7 @@ interact('.draggable')
 
             target
                 .style
-                .transform = `translate(${newX}px, ${newY}px)`;
+                .transform = `translate3d(${newX}px, ${newY}px, 0px)`;
 
             target.setAttribute('data-x', newX);
             target.setAttribute('data-y', newY);
