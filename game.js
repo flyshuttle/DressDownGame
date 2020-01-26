@@ -1,4 +1,9 @@
 var stage = 0;
+var imgPos = {};
+
+function matrixToArray(str) {
+  return str.match(/(-?[0-9\.]+)/g);
+}
 
 document.getElementById("startBtn").addEventListener("click",
     function(){
@@ -14,6 +19,14 @@ document.getElementById("startBtn").addEventListener("click",
             bg.src = "img/bathroom.png";
             fg.style.display = "block";
             btn.style.display = "none";
+            Array.from(document.querySelectorAll(".draggable")).forEach(
+                img => {
+                    var transform = matrixToArray(img.style.transform);
+                    if(transform != null && transform[1]>70){
+                        img.style.display = "none";
+                    }
+                  }
+                );
         }
     });
 
@@ -48,6 +61,7 @@ interact('.draggable')
 
             target.setAttribute('data-x', newX);
             target.setAttribute('data-y', newY);
+            imgPos[target] = newX;
         }
     });
 
