@@ -1,3 +1,21 @@
+var stage = 0;
+
+document.getElementById("startBtn").addEventListener("click",
+    function(){
+        var bg = document.getElementById("bg");
+        var fg = document.getElementById("fg");
+        var btn = document.getElementById("startBtn");
+        if(stage===0){
+            bg.src = "img/room.png";
+            bg.style.zIndex = "0";
+            btn.innerHTML = "Done!"
+            stage = 1;
+        } else {
+            bg.src = "img/bathroom.png";
+            fg.style.display = "block";
+            btn.style.display = "none";
+        }
+    });
 
 window.onload = function() {
     Array.from(document.querySelectorAll(".draggable img")).forEach(
@@ -6,7 +24,6 @@ window.onload = function() {
           }
     )
 }
-
 
 // target elements with the "draggable" class
 interact('.draggable')
