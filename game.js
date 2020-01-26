@@ -22,7 +22,7 @@ document.getElementById("startBtn").addEventListener("click",
             Array.from(document.querySelectorAll(".draggable")).forEach(
                 img => {
                     var transform = matrixToArray(img.style.transform);
-                    if(transform != null && transform[1]>70){
+                    if(transform != null && (transform[1]>70 || transform[1]<-70)){
                         img.style.display = "none";
                     }
                   }
