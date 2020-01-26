@@ -5,6 +5,10 @@ body {
     top: 0;
     overflow: hidden;
     align-items: center;
+    background-image: url("img/splash.png");
+    background-size: cover;
+    background-position: center;
+    display: block;
 }
 
 #container {
